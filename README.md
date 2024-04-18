@@ -1,3 +1,9 @@
+<a href="https://sharpershape.com/" target="_blank">
+  <img src="assets/cropped-SS-logo.png" width="240">
+</a>
+
+#### Research @ Sharper Shape (CVPRW 2024)
+
 # ECLAIR: A High-Fidelity Aerial LiDAR Dataset for Semantic Segmentation
 
 This is the official repository of the **ECLAIR** dataset. For technical details, please refer to:
