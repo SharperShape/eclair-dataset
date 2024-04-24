@@ -31,6 +31,29 @@ users. Includes span guy wires and communication wires.
 - **Vehicle**: All wheeled vehicles that can be driven.
 - **Unassigned**: This category serves as a catch-all for nonsubject points. Anything that is not on the class list is classified as Unassigned. These include wooden pallets, trash, structures not large or strong enough to put under buildings (tents, boulders, etc.), and house antennas.
 
+### Runing the demo
+This demo will run a pre-trained model on the test split of the proposed dataset and compute the macro and per-class F1 score. You will be asked to provide a path to the model checkpoint (referred as `$MODEL_WEIGHTS`) and a dataset directory (referred as `$DATA_DIR`). Create them wherever you wish and make sure to provide their absolute paths.
+
+* Download the model weights (checkpoint) using [this link](https://cdn.shared.sharpershape.services/eclair-dataset/model_eclair.pth) and place it under `$MODEL_WEIGHTS/model_eclair.pth`
+* Download the ECLAIR dataset by filling in the following form. The dataset is distributed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). Once downloaded and unzipped, one should get the following structure:
+```
+$DATA_DIR
+|-- pointclouds
+|       |-- pointcloud_1.laz
+|       |-- pointcloud_2.laz
+|       `-- ...
+|-- labels.json
+```
+* Run `test.py` as follows:
+  ```
+  python test.py --dataset_path $DATA_DIR --model_weights_file $MODEL_WEIGHTS/model_eclair.pth
+  ```
+
+### Copyright
+The annotated dataset is licensed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). This data may not be used for commercial purposes. We will consider commercial usage on a case-by-case basis. Please contact us for more information.
+
+### Contact
+For additional questions about the dataset or inquiries about commercial use, please contact <anand.umashankar@sharpershape.com>
 
 ### Citation
 If you find our work useful, please consider citing:
