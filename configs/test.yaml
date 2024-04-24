@@ -1,0 +1,65 @@
+random_seed: 1984
+
+voxel_size: 0.05
+
+num_classes: 12
+
+feature_names:
+  - intensity # size: 1
+  - return_number # size: 5 (one-hot)
+  - number_of_returns # size: 5 (one-hot)
+  - colors # size: 3
+num_features: 14
+
+important_classes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+class_names:
+  0: Undefined
+  1: Unassigned
+  2: Ground
+  3: Vegetation
+  4: Buildings
+  5: Noise
+  6: Transmission wires
+  7: Distribution wires
+  8: Poles
+  9: Tower (Transmission)
+  10: Fence
+  11: Vehicles
+
+output_mapping:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  11: 11
+
+input_mapping:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  11: 11
+
+test_batch_size: 1
+test_transforms:
+  - name: NormalizeCoordinates
+  - name: NormalizeFeatures
+    params:
+      feature_names: ${feature_names}
+  - name: RemapClassification
+    params:
+      class_mapping: ${input_mapping}
