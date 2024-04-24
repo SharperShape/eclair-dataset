@@ -58,10 +58,10 @@ For additional questions about the dataset or inquiries about commercial use, pl
 ### Citation
 If you find our work useful, please consider citing:
 
-	@inproceedings{eclair2024,
-	  title={ECLAIR: A High-Fidelity Aerial LiDAR Dataset for Semantic Segmentation},
-	  author={Melekhov, Iaroslav and Umashankar, Anand and Kim, Hyeong-Jin and Serkov, Vladislav and Argyle, Dusty},
-    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-	  year={2024}
-	}
+    @inproceedings{eclair2024,
+        title={ECLAIR: A High-Fidelity Aerial LiDAR Dataset for Semantic Segmentation},
+        author={Melekhov, Iaroslav and Umashankar, Anand and Kim, Hyeong-Jin and Serkov, Vladislav and Argyle, Dusty},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+        year={2024}
+    }
 
