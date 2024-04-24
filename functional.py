@@ -70,9 +70,6 @@ class NormalizeFeatures(BaseTransform):
                 (data.number_of_returns - 1).clamp(0, n_classes - 1).long(), num_classes=n_classes
             )
             features.append(number_of_returns)
-        if "edge_of_flight_line" in self.feature_names:
-            edge_of_flight_line = data.edge_of_flight_line.reshape(-1, 1)
-            features.append(edge_of_flight_line)
         if "coordinates" in self.feature_names:
             coordinates = data.pos
             features.append(coordinates)

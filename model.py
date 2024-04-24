@@ -1,3 +1,6 @@
+# Credits: the code is adapted from https://github.com/NVIDIA/MinkowskiEngine/blob/02fc608bea4c0549b0a7b00ca1bf15dee4a0b228/examples/minkunet.py#L1
+
+
 import MinkowskiEngine as ME
 import torch.nn as nn
 

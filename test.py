@@ -91,6 +91,8 @@ def run_inference(
     base_conf = OmegaConf.load("./configs/test.yaml")
     conf = OmegaConf.merge(base_conf, from_cli)
     
+    seed_everything(conf.random_seed)
+    
     label_file = Path(dataset_path) / "labels.json"
     with open(label_file, encoding="utf-8") as f:
         all_tiles: List[Dict] = json.load(f)
