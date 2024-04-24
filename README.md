@@ -11,7 +11,7 @@ This is the official repository of the **ECLAIR** dataset. For technical details
 **ECLAIR: A High-Fidelity Aerial LiDAR Dataset for Semantic Segmentation** <br />
 [Iaroslav Melekhov](https://imelekhov.com/), [Anand Umashankar](https://www.linkedin.com/in/anandcu3/), [Hyeong-Jin Kim](https://www.linkedin.com/in/hjedkim/), 
 [Vlad Serkov](https://www.linkedin.com/in/vladserkoff/), [Dusty Argyle](https://www.linkedin.com/in/dustinargyle/). <br />
-**[[Paper](https://arxiv.org/abs/2404.10699)] [[Project page]] [[Download]]
+**[[Paper](https://arxiv.org/abs/2404.10699)] [[ECLAIR product page](https://sharpershape.com/applications/predictive-asset-management)] [[Download](https://docs.google.com/forms/d/e/1FAIpQLSe5nrufRYcXwTcE1RBz65nqv13zwWkE1QWImOsb8Y7cRSl5TA/viewform)]
 [[USM workshop@CVPR2024](https://usm3d.github.io/)]** <br />
 
 We introduce ECLAIR (Extended Classification of Lidar for AI Recognition), a new outdoor large-scale aerial LiDAR dataset designed specifically for advancing research in point cloud semantic segmentation. As the most extensive and diverse collection of its kind to date, the dataset covers a total area of 10km^2 with close to 600 million points and features eleven distinct object categories. To guarantee the dataset’s quality and utility, we have thoroughly curated the point labels through an internal team of experts, ensuring accuracy and consistency in semantic labeling
@@ -35,7 +35,7 @@ users. Includes span guy wires and communication wires.
 This demo will run a pre-trained model on the test split of the proposed dataset and compute the macro and per-class F1 score. You will be asked to provide a path to the model checkpoint (referred as `$MODEL_WEIGHTS`) and a dataset directory (referred as `$DATA_DIR`). Create them wherever you wish and make sure to provide their absolute paths.
 
 * Download the model weights (checkpoint) using [this link](https://cdn.shared.sharpershape.services/eclair-dataset/model_eclair.pth) and place it under `$MODEL_WEIGHTS/model_eclair.pth`
-* Download the ECLAIR dataset by filling in the following form. The dataset is distributed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). Once downloaded and unzipped, one should get the following structure:
+* Download the ECLAIR dataset by filling in the following [download form](https://docs.google.com/forms/d/e/1FAIpQLSe5nrufRYcXwTcE1RBz65nqv13zwWkE1QWImOsb8Y7cRSl5TA/viewform). The dataset is distributed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). Once downloaded and unzipped, one should get the following structure:
 ```
 $DATA_DIR
 |-- pointclouds
