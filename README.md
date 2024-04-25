@@ -14,24 +14,23 @@ This is the official repository of the **ECLAIR** dataset. For technical details
 **[[Paper](https://arxiv.org/abs/2404.10699)] [[ECLAIR product page](https://sharpershape.com/applications/predictive-asset-management)] [[Download](https://docs.google.com/forms/d/e/1FAIpQLSe5nrufRYcXwTcE1RBz65nqv13zwWkE1QWImOsb8Y7cRSl5TA/viewform)]
 [[USM workshop@CVPR2024](https://usm3d.github.io/)]** <br />
 
-We introduce ECLAIR (Extended Classification of Lidar for AI Recognition), a new outdoor large-scale aerial LiDAR dataset designed specifically for advancing research in point cloud semantic segmentation. As the most extensive and diverse collection of its kind to date, the dataset covers a total area of 10km^2 with close to 600 million points and features eleven distinct object categories. To guarantee the dataset’s quality and utility, we have thoroughly curated the point labels through an internal team of experts, ensuring accuracy and consistency in semantic labeling
+We introduce ECLAIR (**E**xtended **C**lassification of **L**idar for **AI** **R**ecognition), a new outdoor large-scale aerial LiDAR dataset designed specifically for advancing research in point cloud semantic segmentation. As the most extensive and diverse collection of its kind to date, the dataset covers a total area of 10km^2 with close to 600 million points and features eleven distinct object categories. To guarantee the dataset’s quality and utility, we have thoroughly curated the point labels through an internal team of experts, ensuring accuracy and consistency in semantic labeling
 
 <p align="center"> <img src="assets/teaser.png" width="100%"> </p>
 
 Semantic annotations (classes):
-- **Ground**: all points representing the Earth’s surface, including, soil, pavement, roads, and the bottom of water bodies.
-- **Vegetation**: all points representing organic plant life, ranging from trees, low shrubs, and tall grass of all heights.
-- **Buildings**: man-made structures characterized by roofs and walls, encompassing houses, factories, and sheds
-- **Transmission Wires**: high-voltage wires for longdistance transmission from power plants to substations. Either directly connected to transmission towers or poles. Also includes transmission ground wires.
-- **Distribution Wires**: Lower-voltage overhead distribution wires distributing electricity from substation to end
-users. Includes span guy wires and communication wires.
+- **Ground**: All points representing the Earth’s surface, including, soil, pavement, roads, and the bottom of water bodies.
+- **Vegetation**: All points representing organic plant life, ranging from trees, low shrubs, and tall grass of all heights.
+- **Buildings**: Man-made structures characterized by roofs and walls, encompassing houses, factories, and sheds
+- **Transmission Wires**: High-voltage wires for longdistance transmission from power plants to substations. Either directly connected to transmission towers or poles. Also includes transmission ground wires.
+- **Distribution Wires**: Lower-voltage overhead distribution wires distributing electricity from substation to end users. Includes span guy wires and communication wires.
 - **Poles**: Utility poles used to support different types of wires or electroliers. These can include poles with either transmission or distribution wires. Down guy wires, crossarms and transformers are also included in this class.
 - **Transmission Towers**: Large structures supporting transmission wires with the distinct characterisation of steel lattices and cross beams.
 - **Fence**:  Barriers, railing, or other upright structure, typically of wood or wire, enclosing an area of ground.
 - **Vehicle**: All wheeled vehicles that can be driven.
-- **Unassigned**: This category serves as a catch-all for nonsubject points. Anything that is not on the class list is classified as Unassigned. These include wooden pallets, trash, structures not large or strong enough to put under buildings (tents, boulders, etc.), and house antennas.
+- **Unassigned**: A catch-all category for non-subject points. Anything that is not on the class list is classified as Unassigned. These include wooden pallets, trash, structures not large or strong enough to put under buildings (tents, boulders, etc.), and house antennas.
 
-### Runing the demo
+### Running the demo
 This demo will run a pre-trained model on the test split of the proposed dataset and compute the macro and per-class F1 score. You will be asked to provide a path to the model checkpoint (referred as `$MODEL_WEIGHTS`) and a dataset directory (referred as `$DATA_DIR`). Create them wherever you wish and make sure to provide their absolute paths.
 
 * Download the model weights (checkpoint) using [this link](https://cdn.shared.sharpershape.services/eclair-dataset/model_eclair.pth) and place it under `$MODEL_WEIGHTS/model_eclair.pth`
