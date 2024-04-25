@@ -49,11 +49,20 @@ $DATA_DIR
   python test.py --dataset_path $DATA_DIR --model_weights_file $MODEL_WEIGHTS/model_eclair.pth
   ```
 
-### Copyright
-The annotated dataset is licensed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). This data may not be used for commercial purposes. We will consider commercial usage on a case-by-case basis. Please contact us for more information.
-
-### Contact
-For additional questions about the dataset or inquiries about commercial use, please contact <anand.umashankar@sharpershape.com>
+#### Using the Docker image
+* Install Docker: First, make sure Docker is installed on your system. You can download it from [Docker's official website](https://docs.docker.com/engine/install/) and follow the installation instructions for your specific operating system.
+* Build the Docker Image: inside the repository, run:
+  ```
+  docker build -t eclair-image .
+  ```
+* Run the Docker Container and mount the `$DATA_DIR` and `$MODEL_WEIGHTS` paths:
+  ```
+  docker run -it --rm -v $DATA_DIR:/data -v $MODEL_WEIGHTS:/model_weights eclair-image
+  ```
+* Run the evaluation script inside the docker:
+  ```
+  python test.py --dataset_path /data --model_weights_file /model_weights/model_eclair.pth
+  ```
 
 ### Citation
 If you find our work useful, please consider citing:
@@ -64,4 +73,10 @@ If you find our work useful, please consider citing:
         booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
         year={2024}
     }
+
+### Copyright
+The annotated dataset is licensed under [Creative Commons 4.0 (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en). This data may not be used for commercial purposes. We will consider commercial usage on a case-by-case basis. Please contact us for more information.
+
+### Contact
+For additional questions about the dataset or inquiries about commercial use, please contact <anand.umashankar@sharpershape.com>
 
